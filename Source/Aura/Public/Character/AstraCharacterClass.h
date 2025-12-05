@@ -13,5 +13,9 @@ UCLASS()
 class AURA_API AAstraCharacterClass : public AWindBaseCharacterClass
 {
 	GENERATED_BODY()
+
+public:
+	// Sets default values for this character's properties
+	AAstraCharacterClass();
 	
 };

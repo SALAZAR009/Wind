@@ -11,6 +11,9 @@
  */
 
 class UInputMappingContext;
+class UInputAction;
+struct FInputActionValue;
+
 
 UCLASS()
 class AURA_API AMyPlayerController : public APlayerController
@@ -21,11 +24,16 @@ public:
 	AMyPlayerController();
 protected:
 	virtual void BeginPlay() override;
-
+	virtual void SetupInputComponent() override;
 
 private:
 
 	UPROPERTY(EditAnywhere, Category="Inputs")
 	TObjectPtr <UInputMappingContext> PlayerMappingContext;
+
+	UPROPERTY(EditAnywhere, Category = "Inputs")
+	TObjectPtr<UInputAction> MoveAction;
+
+	void Move(const struct FInputActionValue& InputActionvalue);
 
 };
