@@ -4,3 +4,5 @@
 
 #include "CoreMinimal.h"
 
+#define Default_CustomDepthStencilValue 250
+
